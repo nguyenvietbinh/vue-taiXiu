@@ -54,6 +54,7 @@ function kiemTraTienCuoc(input, lim) {
         parseInt(input)
         if ((input <= 0) || (input > lim)) {
             alert('bạn nhập sai tiền cược, mời nhập lại')
+            return false
         } else {
             tienCuoc = input
             return true
@@ -117,13 +118,26 @@ document.addEventListener('DOMContentLoaded', function() {
     soTienElement.innerHTML = soTien
     tai.addEventListener('click', function() {
         if (kiemTraTienCuoc(input.value, soTien)) {
-            console.log(parseInt(tienCuoc))
-            hienThiSucSac()            
+            tienCuoc = parseInt(tienCuoc)
+            hienThiSucSac()
+            if (ketQua[3] >= 11) {
+                soTien = soTien + tienCuoc
+            } else {
+                soTien = soTien - tienCuoc
+            }
+            soTienElement.innerHTML = soTien - 1     
         }
     })
     xiu.addEventListener('click', function() {
         if (kiemTraTienCuoc(input.value, soTien)) {
-            console.log(parseInt(tienCuoc))
+            tienCuoc = parseInt(tienCuoc)
+            hienThiSucSac()
+            if (ketQua[3] <= 10) {
+                soTien = soTien + tienCuoc
+            } else {
+                soTien = soTien - tienCuoc
+            }
+            soTienElement.innerHTML = soTien - 1
         }
     })
 });
