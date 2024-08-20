@@ -1,8 +1,8 @@
 <template>
-    <div class="bd">
+    <div class="backGround">
       <div @click="kiemTraTienCuoc(tienCuoc, soTien); clickTai(tienCuocHopLe)" class="tai">T</div>
       <div @click="kiemTraTienCuoc(tienCuoc, soTien); clickXiu(tienCuocHopLe)" class="xiu">X</div>
-      <div class="sotien">{{ soTien }}</div>
+      <div class="sotien">{{ sharedData }}</div>
       <input @keyup="handleInput($event.target.value)" type="text" class="input" maxlength="6" placeholder='nhaptiencuoc'>
       <div class="circle">
           <div class="sucsac1">
@@ -33,17 +33,23 @@
               <div class="cham" id="cham7_ss3"></div>
           </div>
       </div>
+      <div @click="sendData" class="out"><==</div>
     </div>
   </template>
 
 
 <script>
-
-
+import { useStore } from 'vuex';
+import { computed } from 'vue';
     export default {
+        setup() {
+            const store = useStore();
+            const sharedData = computed(() => store.getters.getSharedData);
+            return { sharedData };
+        },
         data() {
             return {
-                soTien: 1000,
+                soTien: null,
                 tienCuoc: null,
                 tienCuocHopLe: false,
                 sucsac1: null,
@@ -59,7 +65,8 @@
                     [0, 2, 3, 5, 6],
                     [0, 1, 2, 3, 4, 5],
                 ],
-                ketQua: null
+                ketQua: null,
+                display: false,
             }
         },
         mounted() {
@@ -98,6 +105,7 @@
             },
             clickTai(tienCuocHopLe) {
                 if(tienCuocHopLe) {
+                    console.log(this.taiXiuMessage)
                     this.tienCuoc = parseInt(this.tienCuoc)
                     this.hienThiSucSac()
                     if (this.ketQua[3] >= 11) {
@@ -106,6 +114,7 @@
                     } else {
                         this.soTien = this.soTien - this.tienCuoc
                     }
+                    this.$store.commit('updateData', this.soTienData)
                 }
             },
             clickXiu() {
@@ -118,6 +127,7 @@
                     } else {
                         this.soTien = this.soTien - this.tienCuoc
                     }
+                    this.$store.commit('updateData', this.soTienData)
                 }
             },
             hienThiSucSac() {
@@ -152,14 +162,17 @@
                 c = Math.floor(Math.random() * 6) + 1
                 d = a + b + c
                 return [a, b, c, d]
+            },
+            sendData() {
+                this.$emit('send-data', this.display)
             }
-        }
+        },
     }
 </script>
 
 
 <style scoped>
-    .bd {
+    .backGround {
     display: block;
     background-color: rgb(157, 29, 29);
     width: 100%;
@@ -333,5 +346,22 @@
     position: absolute;
     right: 0%;
     top: 0%;
+    }
+    .out {
+        font-size: 45px;
+        text-align: center;
+        user-select: none;
+        display: block;
+        height: 50px;
+        width: 150px;
+        background-color: rgb(250, 177, 177);
+        border: 5px;
+        margin: 0%; 
+        border-style: solid;
+        border-color: rgb(255, 79, 79);
+        border-radius: 5px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
     }
 </style>
