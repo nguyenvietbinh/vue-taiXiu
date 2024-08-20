@@ -1,8 +1,8 @@
 <template>
     <div class="backGround">
-      <div @click="kiemTraTienCuoc(tienCuoc, soTien); clickTai(tienCuocHopLe)" class="tai">T</div>
-      <div @click="kiemTraTienCuoc(tienCuoc, soTien); clickXiu(tienCuocHopLe)" class="xiu">X</div>
-      <div class="sotien">{{ sharedData }}</div>
+      <div @click="kiemTraTienCuoc(tienCuoc, state.soTien); clickTai(tienCuocHopLe)" class="tai">T</div>
+      <div @click="kiemTraTienCuoc(tienCuoc, state.soTien); clickXiu(tienCuocHopLe)" class="xiu">X</div>
+      <div class="sotien">{{ state.soTien }}</div>
       <input @keyup="handleInput($event.target.value)" type="text" class="input" maxlength="6" placeholder='nhaptiencuoc'>
       <div class="circle">
           <div class="sucsac1">
@@ -38,18 +38,17 @@
   </template>
 
 
+
 <script>
-import { useStore } from 'vuex';
-import { computed } from 'vue';
+import { state } from './store';
     export default {
         setup() {
-            const store = useStore();
-            const sharedData = computed(() => store.getters.getSharedData);
-            return { sharedData };
+            return{
+                state
+            }
         },
         data() {
             return {
-                soTien: null,
                 tienCuoc: null,
                 tienCuocHopLe: false,
                 sucsac1: null,
@@ -66,7 +65,6 @@ import { computed } from 'vue';
                     [0, 1, 2, 3, 4, 5],
                 ],
                 ketQua: null,
-                display: false,
             }
         },
         mounted() {
@@ -92,11 +90,6 @@ import { computed } from 'vue';
                         return this.tienCuocHopLe
                     }
                 } else {
-                    if (input === 'all in') {
-                        this.tienCuoc = this.soTien
-                        this.tienCuocHopLe = true
-                        return this.tienCuocHopLe
-                    }
                     alert('bạn nhập sai tiền cược, mời nhập lại')
                     input = ''
                     this.tienCuocHopLe = false
@@ -105,16 +98,14 @@ import { computed } from 'vue';
             },
             clickTai(tienCuocHopLe) {
                 if(tienCuocHopLe) {
-                    console.log(this.taiXiuMessage)
                     this.tienCuoc = parseInt(this.tienCuoc)
                     this.hienThiSucSac()
                     if (this.ketQua[3] >= 11) {
-                        this.soTien = this.soTien + this.tienCuoc
-                        this.soTien --
+                        state.soTien = state.soTien + this.tienCuoc
+                        state.soTien --
                     } else {
-                        this.soTien = this.soTien - this.tienCuoc
+                        state.soTien = state.soTien - this.tienCuoc
                     }
-                    this.$store.commit('updateData', this.soTienData)
                 }
             },
             clickXiu() {
@@ -122,12 +113,11 @@ import { computed } from 'vue';
                     this.tienCuoc = parseInt(this.tienCuoc)
                     this.hienThiSucSac()
                     if (this.ketQua[3] <= 10) {
-                        this.soTien = this.soTien + this.tienCuoc
-                        this.soTien --
+                        state.soTien = state.soTien + this.tienCuoc
+                        state.soTien --
                     } else {
-                        this.soTien = this.soTien - this.tienCuoc
+                        state.soTien = state.soTien - this.tienCuoc
                     }
-                    this.$store.commit('updateData', this.soTienData)
                 }
             },
             hienThiSucSac() {
@@ -164,7 +154,7 @@ import { computed } from 'vue';
                 return [a, b, c, d]
             },
             sendData() {
-                this.$emit('send-data', this.display)
+                this.$emit('send-data-fromTaiXiu', false)
             }
         },
     }

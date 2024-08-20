@@ -4,8 +4,8 @@
         <div class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true">TX</div>
         <div class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true">BC</div>
     </div>
-    <Taixiu v-if="taiXiuIsOn" @send-data="receiveDataFromTaiXiu"/>
-    <BauCua v-if="bauCuaIsOn"/>
+    <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
+    <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
 </template>
 
 
@@ -22,11 +22,14 @@
         methods: {
             receiveDataFromTaiXiu(data) {
                 this.taiXiuIsOn = data
+            },
+            receiveDataFromBauCua(data) {
+                this.bauCuaIsOn = data
             }
         },
         components: {
             Taixiu,
-            BauCua
+            BauCua,
         }
     }
 </script>

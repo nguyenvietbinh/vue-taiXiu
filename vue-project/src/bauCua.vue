@@ -1,5 +1,6 @@
 <template>
     <div class="backGround">
+        <div class="sotien">{{ state.soTien }}</div>
         <div class="circle">
           <div class="sucsac1">
               <div class="cham" id="cham1_ss1"></div>
@@ -29,12 +30,25 @@
               <div class="cham" id="cham7_ss3"></div>
           </div>
       </div>
-      <div class="out"><==</div>
+      <div @click="sendData" class="out"><==</div>
     </div>
 </template>
 
 
 <script>
+import { state } from './store';
+    export default {
+        setup() {
+            return {
+                state
+            }
+        },
+        methods: {
+            sendData() {
+                this.$emit('send-data-fromBauCua', false)
+            }
+        }
+    }
 
 </script>
 
@@ -49,7 +63,24 @@
     top: 0px;
     left: 0px;
     }
-    .circle {
+.sotien {
+    font-size: 45px;
+    text-align: center;
+    user-select: none;
+    display: block;
+    height: 50px;
+    width: 150px;
+    background-color: rgb(250, 177, 177);
+    border: 5px;
+    margin: 0%; 
+    border-style: solid;
+    border-color: rgb(255, 79, 79);
+    border-radius: 5px;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    }
+.circle {
     display: block;
     background-color: rgb(105, 31, 31);
     border: 10px;
