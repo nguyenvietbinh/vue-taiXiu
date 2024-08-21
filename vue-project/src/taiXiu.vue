@@ -40,7 +40,7 @@
 
 
 <script>
-import { state } from './store';
+import { state } from './dataStore';
     export default {
         setup() {
             return{
@@ -81,7 +81,6 @@ import { state } from './store';
                 if (!isNaN(input)) {
                     parseInt(input)
                     if ((input <= 0) || (input > lim)) {
-                        alert('bạn nhập sai tiền cược, mời nhập lại')
                         this.tienCuocHopLe = false
                         return this.tienCuocHopLe
                     } else {
@@ -90,7 +89,6 @@ import { state } from './store';
                         return this.tienCuocHopLe
                     }
                 } else {
-                    alert('bạn nhập sai tiền cược, mời nhập lại')
                     input = ''
                     this.tienCuocHopLe = false
                     return this.tienCuocHopLe
@@ -106,6 +104,8 @@ import { state } from './store';
                     } else {
                         state.soTien = state.soTien - this.tienCuoc
                     }
+                } else {
+                    alert('bạn nhập sai tiền cược, mời nhập lại')
                 }
             },
             clickXiu() {
@@ -118,6 +118,8 @@ import { state } from './store';
                     } else {
                         state.soTien = state.soTien - this.tienCuoc
                     }
+                } else {
+                    alert('bạn nhập sai tiền cược, mời nhập lại')
                 }
             },
             hienThiSucSac() {
@@ -353,5 +355,12 @@ import { state } from './store';
         position: absolute;
         left: 0%;
         top: 0%;
+    }
+    .out:hover {
+        border: 6px rgb(255, 26, 26) solid;
+        background-color: rgb(255, 109, 109);
+    }
+    .input:hover {
+        border: 3px solid black;
     }
 </style>
