@@ -3,20 +3,24 @@
     <div class="backGround">
         <div class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true">TX</div>
         <div class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true">BC</div>
+        <div class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true">BJ</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
+    <BlackJack v-if="BlackJackIsOn" @send-data-fromBlackJack="receiveDataFromBlackJack"/>
 </template>
 
 
 <script>
     import Taixiu from './taiXiu.vue'
     import BauCua from './bauCua.vue'
+    import BlackJack from './blackJack.vue';
     export default {
         data() {
             return {
                 taiXiuIsOn: false,
                 bauCuaIsOn: false,
+                BlackJackIsOn: false,
             }
         },
         methods: {
@@ -25,11 +29,15 @@
             },
             receiveDataFromBauCua(data) {
                 this.bauCuaIsOn = data
+            },
+            receiveDataFromBlackJack(data) {
+                this.BlackJackIsOn = data
             }
         },
         components: {
             Taixiu,
             BauCua,
+            BlackJack,
         }
     }
 </script>
@@ -44,7 +52,7 @@
         top: 0px;
         left: 0px;
     }
-    .logoTaiXiu,.logoBauCua {
+    .logoTaiXiu,.logoBauCua, .logoBlackJack {
         user-select: none;
         display: block;
         height: 100px;
@@ -57,7 +65,7 @@
         font-size: 70px;
         text-align: center;
     }
-    .logoTaiXiu:hover,.logoBauCua:hover {
+    .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover {
         border: 3px, black, solid;
         border-radius: 5px;
         background-color: rgb(244, 0, 0);
