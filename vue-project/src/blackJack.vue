@@ -78,6 +78,12 @@ import { useMyFunction } from './functionsStore';
             },
             sendData() {
                 this.$emit('send-data-fromBlackJack', false)
+                this.playerBlindCards = 6
+                this.botBlindCards = 6
+                for (let i of this.cardsDIsplay) {
+                    i.style.backgroundColor = 'rgb(91, 23, 23)'
+                    i.innerHTML = ''
+                }
             },
             chiaBai() {
                 if (!this.kiemTraTienCuoc(this.input.value, state.soTien)) {
@@ -129,17 +135,17 @@ import { useMyFunction } from './functionsStore';
                 }
             },
             stand() {
-                console.log(this.playerPoint)
                 this.hitButton.style.display = 'none'
                 this.standButton.style.display = 'none'
                 this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDIsplay[6 - this.botBlindCards])
                 this.botPoit = this.calculatePoint(this.cards.slice(0, (6 - this.botBlindCards) + 1))
                 this.botBlindCards --
                 while ((this.botPoit < this.playerPoint) && (this.botBlindCards > 0) && (this.botPoit !== 0)) {
-                    this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDIsplay[6 - this.botBlindCards])
-                    this.botPoit = this.calculatePoint(this.cards.slice(0, (6 - this.botBlindCards) + 1))
-                    this.botBlindCards --
+                    this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDIsplay[6 - this.botBlindCards]);
+                    this.botPoit = this.calculatePoint(this.cards.slice(0, (6 - this.botBlindCards) + 1));
+                    this.botBlindCards--;
                 }
+
                 if (this.botPoit === 0) {
                     this.win.style.display = 'block'
                     state.soTien += this.tienCuoc
@@ -210,9 +216,9 @@ import { useMyFunction } from './functionsStore';
                 this.draw.style.display = 'none'
                 this.playerBlindCards = 6
                 this.botBlindCards = 6
-                for (let i in this.cardsDIsplay) {
-                    this.cardsDIsplay[i].style.backgroundColor = 'rgb(91, 23, 23)'
-                    this.cardsDIsplay[i].innerHTML = ''
+                for (let i of this.cardsDIsplay) {
+                    i.style.backgroundColor = 'rgb(91, 23, 23)'
+                    i.innerHTML = ''
                 }
             }
         }
@@ -326,7 +332,7 @@ import { useMyFunction } from './functionsStore';
         border-radius: 5px;
         position: absolute;
     }
-    .chiaBai:hover, .hit:hover, .stand:hover, .win:hover, .lose:hover, .drow:hover {
+    .chiaBai:hover, .hit:hover, .stand:hover, .win:hover, .lose:hover, .draw:hover {
         border: 6px rgb(255, 26, 26) solid;
         background-color: rgb(255, 109, 109);
     }
