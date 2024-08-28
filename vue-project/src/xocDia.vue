@@ -100,6 +100,7 @@ import { useMyFunction } from './functionsStore';
                     this.out.style.display = 'none'
                     this.xocElement.style.display = 'none'
                     this.batDia.style.display = 'block'
+                    console.log(this.ketQua)
                     this.hienThiCacDongXu(this.ketQua)
                 } else {
                     alert('nhap lai tien cuoc')
