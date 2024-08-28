@@ -5,6 +5,7 @@
         <div class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true">BC</div>
         <div class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true">BJ</div>
         <div class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true">XD</div>
+        <div class="test" style="left: 50%;">wee</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
@@ -60,7 +61,7 @@
         top: 0px;
         left: 0px;
     }
-    .logoTaiXiu,.logoBauCua, .logoBlackJack, .logoXocDia {
+    .logoTaiXiu,.logoBauCua, .logoBlackJack, .logoXocDia, .test {
         cursor: pointer;
         user-select: none;
         display: block;
@@ -74,7 +75,7 @@
         font-size: 70px;
         text-align: center;
     }
-    .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover, .logoXocDia:hover {
+    .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover, .logoXocDia:hover, .test:hover{
         border: 3px, black, solid;
         border-radius: 5px;
         background-color: rgb(244, 0, 0);
