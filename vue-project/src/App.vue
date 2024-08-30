@@ -6,12 +6,14 @@
         <div class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true">BJ</div>
         <div class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true">XD</div>
         <div class="logoBaccarat" style="left: 50%;" @click="BaccaratIsOn = true">BA</div>
+        <div class="logoRoulette" style="left: 60%;" @click="RouletteIsOn = true">RO</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
     <BlackJack v-if="BlackJackIsOn" @send-data-fromBlackJack="receiveDataFromBlackJack"/>  
     <xocDia v-if="xocDiaIsOn" @send-data-fromXocDia="receiveDataFromXocDia"/>
     <Baccarat v-if="BaccaratIsOn" @send-data-fromBaccarat="receiveDataFromBaccarat"/>
+    <Roulette v-if="RouletteIsOn" @send-data-fromRoulette="receiveDataFromRoulette"/>
 </template>
 
 
@@ -21,6 +23,7 @@
     import BlackJack from './blackJack.vue';
     import xocDia from './xocDia.vue';
     import Baccarat from './Baccarat.vue';
+    import Roulette from './Roulette.vue';
     export default {
         data() {
             return {
@@ -29,6 +32,7 @@
                 BlackJackIsOn: false,
                 xocDiaIsOn: false,
                 BaccaratIsOn: false,
+                RouletteIsOn: false,
             }
         },
         methods: {
@@ -46,6 +50,9 @@
             },
             receiveDataFromBaccarat(data) {
                 this.BaccaratIsOn = data
+            },
+            receiveDataFromRoulette(data) {
+                this.RouletteIsOn = data
             }
         },
         components: {
@@ -54,6 +61,7 @@
             BlackJack,
             xocDia,
             Baccarat,
+            Roulette,
         }
     }
 </script>
@@ -68,7 +76,7 @@
         top: 0px;
         left: 0px;
     }
-    .logoTaiXiu,.logoBauCua, .logoBlackJack, .logoXocDia, .logoBaccarat {
+    .logoTaiXiu,.logoBauCua, .logoBlackJack, .logoXocDia, .logoBaccarat, .logoRoulette {
         cursor: pointer;
         user-select: none;
         display: block;
@@ -82,7 +90,7 @@
         font-size: 70px;
         text-align: center;
     }
-    .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover, .logoXocDia:hover, .logoBaccarat:hover {
+    .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover, .logoXocDia:hover, .logoBaccarat:hover, .logoRoulette:hover {
         border: 3px, black, solid;
         border-radius: 5px;
         background-color: rgb(244, 0, 0);
