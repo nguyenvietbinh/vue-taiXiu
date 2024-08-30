@@ -44,7 +44,7 @@ import { useMyFunction } from './functionsStore';
             return {
                 tienCuoc: 0,
                 cards: [],
-                cardsDIsplay: null,
+                cardsDisplay: null,
                 input: null,
                 chiaBaiButton: null,
                 outButton: null,
@@ -62,7 +62,7 @@ import { useMyFunction } from './functionsStore';
             }
         },
         mounted() {
-            this.cardsDIsplay = document.querySelectorAll('.frame')
+            this.cardsDisplay = document.querySelectorAll('.frame')
             this.input = document.querySelector('.input')
             this.chiaBaiButton = document.querySelector('.chiaBai')
             this.outButton = document.querySelector('.out')
@@ -74,13 +74,13 @@ import { useMyFunction } from './functionsStore';
         },
         methods: {
             test() {
-                this.displayCard(Math.floor(Math.random() * 52), this.cardsDIsplay[0])
+                this.displayCard(Math.floor(Math.random() * 52), this.cardsDisplay[0])
             },
             sendData() {
                 this.$emit('send-data-fromBlackJack', false)
                 this.playerBlindCards = 6
                 this.botBlindCards = 6
-                for (let i of this.cardsDIsplay) {
+                for (let i of this.cardsDisplay) {
                     i.style.backgroundColor = 'rgb(91, 23, 23)'
                     i.innerHTML = ''
                 }
@@ -96,11 +96,11 @@ import { useMyFunction } from './functionsStore';
                     this.hitButton.style.display = 'block'
                     this.standButton.style.display = 'block'
                     this.mixCards()
-                    this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDIsplay[6 - this.botBlindCards])
+                    this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDisplay[6 - this.botBlindCards])
                     this.botBlindCards --
-                    this.displayCard(this.cards[12-this.playerBlindCards], this.cardsDIsplay[12-this.playerBlindCards])
+                    this.displayCard(this.cards[12-this.playerBlindCards], this.cardsDisplay[12-this.playerBlindCards])
                     this.playerBlindCards -- 
-                    this.displayCard(this.cards[12 - this.playerBlindCards], this.cardsDIsplay[12 - this.playerBlindCards])
+                    this.displayCard(this.cards[12 - this.playerBlindCards], this.cardsDisplay[12 - this.playerBlindCards])
                     this.playerBlindCards --
                     this.playerPoint = this.calculatePoint(this.cards.slice(6, 8))
                     if (this.playerPoint === 21) {
@@ -123,7 +123,7 @@ import { useMyFunction } from './functionsStore';
             },
             hit() {
                 if (this.playerBlindCards > 0) {
-                    this.displayCard(this.cards[12 - this.playerBlindCards], this.cardsDIsplay[12 - this.playerBlindCards])
+                    this.displayCard(this.cards[12 - this.playerBlindCards], this.cardsDisplay[12 - this.playerBlindCards])
                     this.playerPoint = this.calculatePoint(this.cards.slice(6, (12 - this.playerBlindCards) + 1))
                     this.playerBlindCards --
                     if (this.playerPoint === 0) {
@@ -137,11 +137,11 @@ import { useMyFunction } from './functionsStore';
             stand() {
                 this.hitButton.style.display = 'none'
                 this.standButton.style.display = 'none'
-                this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDIsplay[6 - this.botBlindCards])
+                this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDisplay[6 - this.botBlindCards])
                 this.botPoit = this.calculatePoint(this.cards.slice(0, (6 - this.botBlindCards) + 1))
                 this.botBlindCards --
                 while ((this.botPoit < this.playerPoint) && (this.botBlindCards > 0) && (this.botPoit !== 0)) {
-                    this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDIsplay[6 - this.botBlindCards]);
+                    this.displayCard(this.cards[6 - this.botBlindCards], this.cardsDisplay[6 - this.botBlindCards]);
                     this.botPoit = this.calculatePoint(this.cards.slice(0, (6 - this.botBlindCards) + 1));
                     this.botBlindCards--;
                 }
@@ -216,7 +216,7 @@ import { useMyFunction } from './functionsStore';
                 this.draw.style.display = 'none'
                 this.playerBlindCards = 6
                 this.botBlindCards = 6
-                for (let i of this.cardsDIsplay) {
+                for (let i of this.cardsDisplay) {
                     i.style.backgroundColor = 'rgb(91, 23, 23)'
                     i.innerHTML = ''
                 }
