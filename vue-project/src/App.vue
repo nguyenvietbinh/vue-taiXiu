@@ -1,12 +1,12 @@
 
 <template>
     <div class="backGround">
-        <div class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true">TX</div>
-        <div class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true">BC</div>
-        <div class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true">BJ</div>
-        <div class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true">XD</div>
-        <div class="logoBaccarat" style="left: 50%;" @click="BaccaratIsOn = true">BA</div>
-        <div class="logoRoulette" style="left: 60%;" @click="RouletteIsOn = true">RO</div>
+        <div class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true; AnimationIsOn = false">TX</div>
+        <div class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true; AnimationIsOn = false">BC</div>
+        <div class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true; AnimationIsOn = false">BJ</div>
+        <div class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true; AnimationIsOn = false">XD</div>
+        <div class="logoBaccarat" style="left: 50%;" @click="BaccaratIsOn = true; AnimationIsOn = false">BA</div>
+        <div class="logoRoulette" style="left: 60%;" @click="RouletteIsOn = true; AnimationIsOn = false">RO</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
@@ -14,6 +14,7 @@
     <xocDia v-if="xocDiaIsOn" @send-data-fromXocDia="receiveDataFromXocDia"/>
     <Baccarat v-if="BaccaratIsOn" @send-data-fromBaccarat="receiveDataFromBaccarat"/>
     <Roulette v-if="RouletteIsOn" @send-data-fromRoulette="receiveDataFromRoulette"/>
+    <Animation v-if="AnimationIsOn"/>
 </template>
 
 
@@ -24,6 +25,7 @@
     import xocDia from './xocDia.vue';
     import Baccarat from './Baccarat.vue';
     import Roulette from './Roulette.vue';
+    import Animation from './Animation.vue'
     export default {
         data() {
             return {
@@ -33,26 +35,33 @@
                 xocDiaIsOn: false,
                 BaccaratIsOn: false,
                 RouletteIsOn: false,
+                AnimationIsOn: true,
             }
         },
         methods: {
             receiveDataFromTaiXiu(data) {
                 this.taiXiuIsOn = data
+                this.AnimationIsOn = true
             },
             receiveDataFromBauCua(data) {
                 this.bauCuaIsOn = data
+                this.AnimationIsOn = true
             },
             receiveDataFromBlackJack(data) {
                 this.BlackJackIsOn = data
+                this.AnimationIsOn = true
             },
             receiveDataFromXocDia(data) {
                 this.xocDiaIsOn = data
+                this.AnimationIsOn = true
             },
             receiveDataFromBaccarat(data) {
                 this.BaccaratIsOn = data
+                this.AnimationIsOn = true
             },
             receiveDataFromRoulette(data) {
                 this.RouletteIsOn = data
+                this.AnimationIsOn = true
             }
         },
         components: {
@@ -62,6 +71,7 @@
             xocDia,
             Baccarat,
             Roulette,
+            Animation,
         }
     }
 </script>
