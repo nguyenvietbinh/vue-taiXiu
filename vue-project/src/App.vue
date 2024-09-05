@@ -1,12 +1,12 @@
 
 <template>
     <div class="backGround">
-        <div class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true; AnimationIsOn = false">TX</div>
-        <div class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true; AnimationIsOn = false">BC</div>
-        <div class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true; AnimationIsOn = false">BJ</div>
-        <div class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true; AnimationIsOn = false">XD</div>
-        <div class="logoBaccarat" style="left: 50%;" @click="BaccaratIsOn = true; AnimationIsOn = false">BA</div>
-        <div class="logoRoulette" style="left: 60%;" @click="RouletteIsOn = true; AnimationIsOn = false">RO</div>
+        <div id="logo" class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true; logoClick()">TX</div>
+        <div id="logo" class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true; logoClick()">BC</div>
+        <div id="logo" class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true; logoClick()">BJ</div>
+        <div id="logo" class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true; logoClick()">XD</div>
+        <div id="logo" class="logoBaccarat" style="left: 50%;" @click="BaccaratIsOn = true; logoClick()">BA</div>
+        <div id="logo" class="logoRoulette" style="left: 60%;" @click="RouletteIsOn = true; logoClick()">RO</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
@@ -15,6 +15,7 @@
     <Baccarat v-if="BaccaratIsOn" @send-data-fromBaccarat="receiveDataFromBaccarat"/>
     <Roulette v-if="RouletteIsOn" @send-data-fromRoulette="receiveDataFromRoulette"/>
     <Animation v-if="AnimationIsOn"/>
+    <DogAnimation v-if="DogAnimationIsON"/>
 </template>
 
 
@@ -25,7 +26,8 @@
     import xocDia from './xocDia.vue';
     import Baccarat from './Baccarat.vue';
     import Roulette from './Roulette.vue';
-    import Animation from './Animation.vue'
+    import Animation from './Animation.vue';
+    import DogAnimation from './dogAnimation.vue'
     export default {
         data() {
             return {
@@ -35,33 +37,45 @@
                 xocDiaIsOn: false,
                 BaccaratIsOn: false,
                 RouletteIsOn: false,
-                AnimationIsOn: true,
+                AnimationIsOn: false,
+                DogAnimationIsON: true,
+                logo: null,
             }
         },
         methods: {
             receiveDataFromTaiXiu(data) {
                 this.taiXiuIsOn = data
                 this.AnimationIsOn = true
+                this.DogAnimationIsON = true
             },
             receiveDataFromBauCua(data) {
                 this.bauCuaIsOn = data
                 this.AnimationIsOn = true
+                this.DogAnimationIsON = true
             },
             receiveDataFromBlackJack(data) {
                 this.BlackJackIsOn = data
                 this.AnimationIsOn = true
+                this.DogAnimationIsON = true
             },
             receiveDataFromXocDia(data) {
                 this.xocDiaIsOn = data
                 this.AnimationIsOn = true
+                this.DogAnimationIsON = true
             },
             receiveDataFromBaccarat(data) {
                 this.BaccaratIsOn = data
                 this.AnimationIsOn = true
+                this.DogAnimationIsON = true
             },
             receiveDataFromRoulette(data) {
                 this.RouletteIsOn = data
                 this.AnimationIsOn = true
+                this.DogAnimationIsON = true
+            },
+            logoClick() {
+                this.AnimationIsOn = false
+                this.DogAnimationIsON = false
             }
         },
         components: {
@@ -72,6 +86,10 @@
             Baccarat,
             Roulette,
             Animation,
+            DogAnimation,
+        }, 
+        mounted() {
+            this.logo = document.querySelectorAll('#logo')
         }
     }
 </script>
