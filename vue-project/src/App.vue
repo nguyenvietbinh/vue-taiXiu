@@ -1,6 +1,6 @@
 
 <template>
-    <div class="backGround">
+    <div v-if="homePageIsOn" class="backGround">
         <div id="logo" class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true; logoClick()">TX</div>
         <div id="logo" class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true; logoClick()">BC</div>
         <div id="logo" class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true; logoClick()">BJ</div>
@@ -37,35 +37,43 @@
                 RouletteIsOn: false,
                 DogAnimationIsON: true,
                 logo: null,
+                homePageIsOn: true,
             }
         },
         methods: {
             receiveDataFromTaiXiu(data) {
                 this.taiXiuIsOn = data
                 this.DogAnimationIsON = true
+                this.homePageIsOn = true
             },
             receiveDataFromBauCua(data) {
                 this.bauCuaIsOn = data
                 this.DogAnimationIsON = true
+                this.homePageIsOn = true
             },
             receiveDataFromBlackJack(data) {
                 this.BlackJackIsOn = data
                 this.DogAnimationIsON = true
+                this.homePageIsOn = true
             },
             receiveDataFromXocDia(data) {
                 this.xocDiaIsOn = data
                 this.DogAnimationIsON = true
+                this.homePageIsOn = true
             },
             receiveDataFromBaccarat(data) {
                 this.BaccaratIsOn = data
                 this.DogAnimationIsON = true
+                this.homePageIsOn = true
             },
             receiveDataFromRoulette(data) {
                 this.RouletteIsOn = data
                 this.DogAnimationIsON = true
+                this.homePageIsOn = true
             },
             logoClick() {
                 this.DogAnimationIsON = false
+                this.homePageIsOn = false
             }
         },
         components: {
@@ -86,7 +94,7 @@
 <style scoped>
     .backGround {
         display: block;
-        background-color: rgb(157, 29, 29);
+        background-color: #f9f9f9;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -99,8 +107,8 @@
         display: block;
         height: 100px;
         width: 100px;
-        background-color: rgb(255, 0, 0);
-        border: 2px, black, solid;
+        background-color: #f9f9f9;
+        border: 0px, black, solid;
         border-radius: 5px;
         position: absolute;
         top: 50px;
@@ -108,8 +116,9 @@
         text-align: center;
     }
     .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover, .logoXocDia:hover, .logoBaccarat:hover, .logoRoulette:hover {
-        border: 3px, black, solid;
+        border: 0px, black, solid;
         border-radius: 5px;
-        background-color: rgb(244, 0, 0);
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+        -10px -10px 10px white
     }
 </style>

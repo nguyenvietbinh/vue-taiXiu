@@ -1,5 +1,5 @@
 <template>
-    <div class="backGround">
+    <div class="BJbackGround">
         <div class="sotien">{{ state.soTien }}</div>
         <div style="top: 10%;" class="botBar">
             <div style="left: 38px;" class="frame" id="botBar-frame1"></div>
@@ -145,7 +145,6 @@ import { useMyFunction } from './functionsStore';
                     this.botPoit = this.calculatePoint(this.cards.slice(0, (6 - this.botBlindCards) + 1));
                     this.botBlindCards--;
                 }
-
                 if (this.botPoit === 0) {
                     this.win.style.display = 'block'
                     state.soTien += this.tienCuoc
@@ -229,7 +228,7 @@ import { useMyFunction } from './functionsStore';
 
 
 <style scoped>
-    .backGround {
+    .BJbackGround {
         display: block;
         background-color: rgb(157, 29, 29);
         width: 100%;

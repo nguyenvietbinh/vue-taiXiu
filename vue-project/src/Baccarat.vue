@@ -1,5 +1,5 @@
 <template>
-    <div class="backGround">
+    <div class="BAbackGround">
         <div @click="sendData" class="out"><==</div>
         <div class="sotien">{{ state.soTien }}</div>
         <div style="top: 10%;" class="botBar">
@@ -291,6 +291,15 @@ import { useMyFunction } from './functionsStore';
 
 
 <style scoped>
+.BAbackGround {
+    display: block;
+    background-color: rgb(157, 29, 29);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
     .sotien {
     font-size: 45px;
     text-align: center;

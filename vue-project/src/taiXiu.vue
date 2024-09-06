@@ -1,5 +1,5 @@
 <template>
-    <div class="backGround">
+    <div class="TXbackGround">
       <div @click="kiemTraTienCuoc(tienCuoc, state.soTien); clickTai(tienCuocHopLe)" class="tai">T</div>
       <div @click="kiemTraTienCuoc(tienCuoc, state.soTien); clickXiu(tienCuocHopLe)" class="xiu">X</div>
       <div class="sotien">{{ state.soTien }}</div>
@@ -164,7 +164,7 @@ import { state } from './dataStore';
 
 
 <style scoped>
-    .backGround {
+    .TXbackGround {
     display: block;
     background-color: rgb(157, 29, 29);
     width: 100%;

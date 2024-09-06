@@ -1,5 +1,5 @@
 <template>
-    <div class="backGround">
+    <div class="XDbackGround">
         <div class="sotien">{{ state.soTien }}</div>
         <div class="inputsFrame">
             <div style="left: 0%; top: 0%" class="inputFrame" id="chan">
@@ -260,7 +260,7 @@ import { useMyFunction } from './functionsStore';
 
 
 <style scoped>
-    .backGround {
+    .XDbackGround {
         display: block;
         background-color: rgb(157, 29, 29);
         width: 100%;

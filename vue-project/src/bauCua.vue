@@ -1,5 +1,5 @@
 <template>
-    <div class="backGround">
+    <div class="BCbackGround">
         <div class="sotien">{{ state.soTien }}</div>
         <div class="circle">
           <div class="sucsac1">
@@ -194,7 +194,7 @@ import { useMyFunction } from './functionsStore';
 
 
 <style scoped>
-.backGround {
+.BCbackGround {
     display: block;
     background-color: rgb(157, 29, 29);
     width: 100%;

@@ -1,5 +1,5 @@
 <template>
-    <div class="backGround">
+    <div class="RObackGround">
         <div @click="sendData" class="out"><==</div>
         <div class="sotien">{{ state.soTien }}</div>
         <BetTable/>
@@ -38,7 +38,7 @@ import Wheel from './rouletteComponents/wheel.vue';
 
 
 <style scoped>
-    .backGround {
+    .RObackGround {
         display: block;
         background-color: rgb(157, 29, 29);
         width: 100%;
