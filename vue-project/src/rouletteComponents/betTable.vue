@@ -1,56 +1,56 @@
 <template>
     <div @mousemove="handleMouseMove" class="betTable">
         <img @click="handleClick" class="rouletteBetTableImage" src="./rouletteImage/rouletteBetTable.png" alt="">
-        <div @mouseup="" style="top: 51px; left: 68px;" class="oneToEightteenBlock"></div>
-        <div style="top: 51px; left: 385px;" class="nineteenToThirtysixBlock"></div>
-        <div style="left: 68px;" class="oneToTwelveBlock"></div>
-        <div style="left: 279px;" class="TwelveToTwentyfourBlock"></div>
-        <div style="left: 490px;" class="TwentyfourToThirtysixBlock"></div>
-        <div style="left: 68px;" class="even"></div>
-        <div style="left: 227px;" class="red"></div>
-        <div style="left: 386px;" class="black"></div>
-        <div style="left: 544px;" class="odd"></div>
-        <div style="top: 221px;" class="zero"></div>
-        <div style="top: 119px;" class="zeroZero"></div>
-        <div id="oneNumberBlock">1</div>
-        <div id="oneNumberBlock">2</div>
-        <div id="oneNumberBlock">3</div>
-        <div id="oneNumberBlock">4</div>
-        <div id="oneNumberBlock">5</div>
-        <div id="oneNumberBlock">6</div>
-        <div id="oneNumberBlock">7</div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
-        <div id="oneNumberBlock"></div>
+        <div style="top: 221px;" class="zero betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div class="oneNumberBlock betBlock"></div>
+        <div style="top: 51px; left: 68px;" class="oneToEightteenBlock betBlock"></div>
+        <div style="top: 51px; left: 385px;" class="nineteenToThirtysixBlock betBlock"></div>
+        <div style="left: 68px;" class="oneToTwelveBlock betBlock"></div>
+        <div style="left: 279px;" class="TwelveToTwentyfourBlock betBlock"></div>
+        <div style="left: 490px;" class="TwentyfourToThirtysixBlock betBlock"></div>
+        <div style="left: 68px;" class="even betBlock"></div>
+        <div style="left: 227px;" class="red betBlock"></div>
+        <div style="left: 386px;" class="black betBlock"></div>
+        <div style="left: 544px;" class="odd betBlock"></div>
+        <div style="top: 119px;" class="zeroZero betBlock"></div>
     </div>
     <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiveChip">5</div>
     <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="tenChip">10</div>
@@ -68,7 +68,7 @@ import { onMounted } from 'vue'
             const top = 119
             const left = 68
             onMounted(() => {
-                const oneNumberBlock = document.querySelectorAll('#oneNumberBlock')
+                const oneNumberBlock = document.querySelectorAll('.oneNumberBlock')
                 if (oneNumberBlock) {
                     oneNumberBlock.forEach((item, i) => {
                         let a = (i - (i % 3))/3
@@ -105,7 +105,7 @@ import { onMounted } from 'vue'
                 mouseY: 0,
                 newMouseX: 0,
                 newMouseY: 0,
-
+                betBlocks: null
             }
         },
         mounted() {
@@ -116,6 +116,7 @@ import { onMounted } from 'vue'
             this.hundredChip = document.querySelector('.hundredChip')
             this.chipList = [this.fiveChip, this.tenChip, this.twentyChip, this.fiftyChip, this.hundredChip]
             this.chipIsOnList = [this.fiveChipIsOn, this.tenChipIsOn, this.twentyChipIsOn, this.fiftyChipIsOn, this.hundredChipIsOn]
+            this.betBlocks = document.querySelectorAll('.betBlock')
         },
         methods: {
             handleClick() {
@@ -163,6 +164,23 @@ import { onMounted } from 'vue'
                         }
                     }
                 }
+                this.betBlocks.forEach((item, index) => {
+                    if (this.positionIsInSquare(this.mouseX, this.mouseY, parseInt(window.getComputedStyle(item).left) + 600, parseInt(window.getComputedStyle(item).top) + 65, parseInt(window.getComputedStyle(item).height), parseInt(window.getComputedStyle(item).width))) {
+                        item.style.opacity = '0.5'
+                    } else {
+                        item.style.opacity = '0'
+                    }
+                })
+                
+            },
+            positionIsInSquare(Px, Py, SQx, SQy, h, w) {
+                if ((Px >= SQx) && (Px <= (SQx + w))) {
+                    if ((Py > SQy) && (Py <= (SQy + h))) {
+                        return true
+                    }
+                    return false
+                }
+                return false
             },
             handleMouseDown() {
                 this.mouseX = event.clientX
@@ -206,7 +224,7 @@ import { onMounted } from 'vue'
         opacity: 0;
         transition: opacity 0.2s;
     }
-    .oneToEightteenBlock:hover, .nineteenToThirtysixBlock:hover, .oneToTwelveBlock:hover, .TwelveToTwentyfourBlock:hover, .TwentyfourToThirtysixBlock:hover, .even:hover, .red:hover, .black:hover, .odd:hover, #oneNumberBlock:hover, .zero:hover, .zeroZero:hover {
+    .oneToEightteenBlock:hover, .nineteenToThirtysixBlock:hover, .oneToTwelveBlock:hover, .TwelveToTwentyfourBlock:hover, .TwentyfourToThirtysixBlock:hover, .even:hover, .red:hover, .black:hover, .odd:hover, .oneNumberBlock:hover, .zero:hover, .zeroZero:hover {
         opacity: 0.5;
     }
     .oneToTwelveBlock, .TwelveToTwentyfourBlock, .TwentyfourToThirtysixBlock {
@@ -239,7 +257,7 @@ import { onMounted } from 'vue'
         opacity: 0;
         transition: opacity 0.2s;
     }
-    #oneNumberBlock {
+    .oneNumberBlock {
         display: block;
         width: 50px;
         height: 65px;

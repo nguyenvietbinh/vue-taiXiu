@@ -14,7 +14,6 @@
     <xocDia v-if="xocDiaIsOn" @send-data-fromXocDia="receiveDataFromXocDia"/>
     <Baccarat v-if="BaccaratIsOn" @send-data-fromBaccarat="receiveDataFromBaccarat"/>
     <Roulette v-if="RouletteIsOn" @send-data-fromRoulette="receiveDataFromRoulette"/>
-    <Animation v-if="AnimationIsOn"/>
     <DogAnimation v-if="DogAnimationIsON"/>
 </template>
 
@@ -26,7 +25,6 @@
     import xocDia from './xocDia.vue';
     import Baccarat from './Baccarat.vue';
     import Roulette from './Roulette.vue';
-    import Animation from './Animation.vue';
     import DogAnimation from './dogAnimation.vue'
     export default {
         data() {
@@ -37,7 +35,6 @@
                 xocDiaIsOn: false,
                 BaccaratIsOn: false,
                 RouletteIsOn: false,
-                AnimationIsOn: false,
                 DogAnimationIsON: true,
                 logo: null,
             }
@@ -45,36 +42,29 @@
         methods: {
             receiveDataFromTaiXiu(data) {
                 this.taiXiuIsOn = data
-                this.AnimationIsOn = true
                 this.DogAnimationIsON = true
             },
             receiveDataFromBauCua(data) {
                 this.bauCuaIsOn = data
-                this.AnimationIsOn = true
                 this.DogAnimationIsON = true
             },
             receiveDataFromBlackJack(data) {
                 this.BlackJackIsOn = data
-                this.AnimationIsOn = true
                 this.DogAnimationIsON = true
             },
             receiveDataFromXocDia(data) {
                 this.xocDiaIsOn = data
-                this.AnimationIsOn = true
                 this.DogAnimationIsON = true
             },
             receiveDataFromBaccarat(data) {
                 this.BaccaratIsOn = data
-                this.AnimationIsOn = true
                 this.DogAnimationIsON = true
             },
             receiveDataFromRoulette(data) {
                 this.RouletteIsOn = data
-                this.AnimationIsOn = true
                 this.DogAnimationIsON = true
             },
             logoClick() {
-                this.AnimationIsOn = false
                 this.DogAnimationIsON = false
             }
         },
@@ -85,7 +75,6 @@
             xocDia,
             Baccarat,
             Roulette,
-            Animation,
             DogAnimation,
         }, 
         mounted() {
