@@ -1,28 +1,28 @@
 <template>
-    <div class="BAbackGround">
-        <div @click="sendData" class="out"><==</div>
-        <div class="sotien">{{ state.soTien }}</div>
-        <div style="top: 10%;" class="botBar">
-            <div style="left: 38px;" class="frame" id="botBar-frame1"></div>
-            <div style="left: 238px;" class="frame" id="botBar-frame2"></div>
-            <div style="left: 438px;" class="frame" id="botBar-frame3"></div>
-            <div style="left: 638px;" class="frame" id="botBar-frame4"></div>
-            <div style="left: 838px;" class="frame" id="botBar-frame5"></div>
-            <div style="left: 1038px;" class="frame" id="botBar-frame6"></div>
+    <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0 font-mono">
+        <img @click="sendData" src="./image/backHome.png" alt="" class="out m-2 h-[50px] w-auto p-1 cursor-pointer bg-[#9D1D1D] border-black border-[0px] border-solid rounded-[50%] hover:border-[3px] hover:translate-y-[4px] transition-all">
+        <div class="sotien select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
+        <div style="top: 10%;left: calc(50% - 602px);" class="botBar h-[200px] w-[1200px] bg-[#9D1D1D] border-[2px] border-white border-solid rounded-[5px] absolute">
+            <div style="left: 38px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame1"></div>
+            <div style="left: 238px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame2"></div>
+            <div style="left: 438px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame3"></div>
+            <div style="left: 638px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame4"></div>
+            <div style="left: 838px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame5"></div>
+            <div style="left: 1038px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame6"></div>
         </div>
-        <div style="bottom: 10%;" class="playerBar">
-            <div style="left: 38px;" class="frame" id="playerBar-frame1"></div>
-            <div style="left: 238px;" class="frame" id="playerBar-frame2"></div>
-            <div style="left: 438px;" class="frame" id="playerBar-frame3"></div>
-            <div style="left: 638px;" class="frame" id="playerBar-frame4"></div>
-            <div style="left: 838px;" class="frame" id="playerBar-frame5"></div>
-            <div style="left: 1038px;" class="frame" id="playerBar-frame6"></div>
+        <div style="bottom: 10%;left: calc(50% - 602px);" class="playerBar h-[200px] w-[1200px] bg-[#9D1D1D] border-[2px] border-white border-solid rounded-[5px] absolute">
+            <div style="left: 38px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="playerBar-frame1"></div>
+            <div style="left: 238px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="playerBar-frame2"></div>
+            <div style="left: 438px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="playerBar-frame3"></div>
+            <div style="left: 638px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="playerBar-frame4"></div>
+            <div style="left: 838px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="playerBar-frame5"></div>
+            <div style="left: 1038px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="playerBar-frame6"></div>
         </div>
-        <input style="left: calc(50% - 447px);" class="input" type="text" placeholder="Thắng">
-        <input style="left: calc(50% - 150px);" class="input" type="text" placeholder="Hòa">
-        <input style="left: calc(50% + 147px);" class="input" type="text" placeholder="Thua">
-        <div style="left: calc(50% - 75px); top: 0%" @click="chiaBai" class="chiaBai">Chia Bài</div>
-        <button style="display: none;" @click="playagain" class="playagain">PlayAgain</button>
+        <input style="left: calc(50% - 447px); top: calc(50% - 27px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" type="text" placeholder="Thắng">
+        <input style="left: calc(50% - 150px); top: calc(50% - 27px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" type="text" placeholder="Hòa">
+        <input style="left: calc(50% + 147px); top: calc(50% - 27px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" type="text" placeholder="Thua">
+        <div style="left: calc(50% - 105px); top: 0%" @click="chiaBai" class="chiaBai cursor-pointer m-2 select-none absolute inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-9 border-black border-[2px] border-solid rounded-[4px] hover:translate-y-[-5px] hover:bg-black hover:text-[#d9342e] transition-all">Chia Bài</div>
+        <div @click="playagain" style="display: none; left: calc(50% - 80px); top: calc(50% - 30px)" class="playagain cursor-pointer m-2 select-none absolute inline-block bg-[#d9342e] h-[50px] w-[150px] text-center text-[30px] border-black border-[2px] border-solid rounded-[4px] hover:translate-y-[-5px] hover:bg-black hover:text-[#d9342e] transition-all">playagain</div>
     </div>
 </template>
 
@@ -288,127 +288,3 @@ import { useMyFunction } from './functionsStore';
         }
     }
 </script>
-
-
-<style scoped>
-.BAbackGround {
-    display: block;
-    background-color: rgb(157, 29, 29);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    }
-    .sotien {
-    font-size: 45px;
-    text-align: center;
-    user-select: none;
-    display: block;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(250, 177, 177);
-    border: 5px;
-    margin: 0%; 
-    border-style: solid;
-    border-color: rgb(255, 79, 79);
-    border-radius: 5px;
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    }
-    .out{
-        font-size: 45px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-    }
-    .out:hover, .chiaBai:hover, .playagain:hover{
-        border: 6px rgb(255, 26, 26) solid;
-        background-color: rgb(255, 109, 109);
-    }
-    .botBar, .playerBar {
-        display: block;
-        height: 200px;
-        width: 1200px;
-        background-color: rgb(157, 29, 29);
-        border: 2px white solid;
-        border-radius: 5px;
-        position: absolute;
-        left: calc(50% - 602px);
-    }
-    .frame {
-        user-select: none;
-        display: block;
-        background-color: rgb(91, 23, 23);
-        height: 160px;
-        width: 120px;
-        border: 2px white solid;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 120px;
-        position: absolute;
-        top: 18px;
-    }
-    .input {
-    user-select: none;
-    font-size: 40px;
-    background-color: #ffb2ba; /* Màu nền cho cửa sổ input */
-    border: 2px solid #d9342e; /* Màu đỏ cho viền */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 50px;
-    width: 250px;
-    position: absolute;
-    top: calc(50% - 27px);
-    }
-    .input:hover {
-        border: 3px solid black;
-    }
-    .playagain {
-        font-size: 20px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: calc(50% - 80px);
-        cursor: pointer;
-        top: calc(50% - 30px)
-    }
-    .chiaBai {
-        font-size: 35px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-    }
-</style>

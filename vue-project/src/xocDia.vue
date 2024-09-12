@@ -1,43 +1,43 @@
 <template>
-    <div class="XDbackGround">
-        <div class="sotien">{{ state.soTien }}</div>
-        <div class="inputsFrame">
-            <div style="left: 0%; top: 0%" class="inputFrame" id="chan">
-                <input id="chanInput" type="text" class="input" maxlength="6" placeholder="Chẵn">
+    <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0">
+        <div class="sotien select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
+        <div style="left: calc(50% - 460px);" class="inputsFrame h-[200px] w-[900px] border-[3px] border-solid border-black rounded-[5px] absolute top-[170px]">
+            <div style="left: 0%; top: 0%" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="chan">
+                <input id="chanInput" type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Chẵn">
             </div>
-            <div style="left: 0%; bottom: 0%;" class="inputFrame" id="le">
-                <input id="leInput" type="text" class="input" maxlength="6" placeholder="Lẻ">
+            <div style="left: 0%; bottom: 0%;" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="le">
+                <input id="leInput" type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Lẻ">
             </div>
-            <div style="left: 300px; top: 0%;" class="inputFrame" id="baSap">
-                <input id="baSapInput" type="text" class="input" maxlength="6" placeholder="Ba Sấp">
+            <div style="left: 300px; top: 0%;" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="baSap">
+                <input id="baSapInput" type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Ba Sấp">
             </div>
-            <div style="left: 300px; bottom: 0%;" class="inputFrame" id="baNgua">
-                <input id="baNguaInput " type="text" class="input" maxlength="6" placeholder="Ba Ngửa">
+            <div style="left: 300px; bottom: 0%;" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="baNgua">
+                <input id="baNguaInput " type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Ba Ngửa">
             </div>
-            <div style="right: 0%; top: 0%;" class="inputFrame" id="bonSap">
-                <input id="bonSapInput" type="text" class="input" maxlength="6" placeholder="Bốn Sấp">
+            <div style="right: 0%; top: 0%;" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="bonSap">
+                <input id="bonSapInput" type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Bốn Sấp">
             </div>
-            <div style="right: 0%; bottom: 0%;" class="inputFrame" id="bonNgua">
-                <input id="bonNguaInput" type="text" class="input" maxlength="6" placeholder="Bốn Ngửa">
+            <div style="right: 0%; bottom: 0%;" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="bonNgua">
+                <input id="bonNguaInput" type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Bốn Ngửa">
             </div>
         </div>
-        <div @click="xoc" class="xoc">XÓC</div>
-        <div style="display: none;" class="batDia">
-            <img class="dia" src="./image/dia.png" alt="">
+        <div @click="xoc" style="left: calc(50% - 80px);" class="xoc top-[400px] cursor-pointer m-2 select-none absolute inline-block bg-[#d9342e] h-[50px] w-[150px] text-center text-[30px] px-9 border-black border-[2px] border-solid rounded-[4px] hover:translate-y-[-5px] hover:bg-black hover:text-[#d9342e] transition-all">XÓC</div>
+        <div style="display: none; top: calc(50% - 250px); left: calc(50% - 250px);" class="batDia absolute h-[500px] w-[500px]">
+            <img class="dia w-[500px] h-[500px] absolute top-0 left-0" src="./image/dia.png" alt="">
 
-            <img id="xu" class="do" src="./image/Do.png" alt="">
-            <img id="xu" class="trang" src="./image/Trang.png" alt="">
-            <img id="xu" class="do" src="./image/Do.png" alt="">
-            <img id="xu" class="trang" src="./image/Trang.png" alt="">
-            <img id="xu" class="do" src="./image/Do.png" alt="">
-            <img id="xu" class="trang" src="./image/Trang.png" alt="">
-            <img id="xu" class="do" src="./image/Do.png" alt="">
-            <img id="xu" class="trang" src="./image/Trang.png" alt="">
+            <img id="xu" class="do absolute hidden" src="./image/Do.png" alt="">
+            <img id="xu" class="trang absolute hidden" src="./image/Trang.png" alt="">
+            <img id="xu" class="do absolute hidden" src="./image/Do.png" alt="">
+            <img id="xu" class="trang absolute hidden" src="./image/Trang.png" alt="">
+            <img id="xu" class="do absolute hidden" src="./image/Do.png" alt="">
+            <img id="xu" class="trang absolute hidden" src="./image/Trang.png" alt="">
+            <img id="xu" class="do absolute hidden" src="./image/Do.png" alt="">
+            <img id="xu" class="trang absolute hidden" src="./image/Trang.png" alt="">
 
-            <img @mousemove="batMousemove" @mousedown="batMousedown" @mouseup="removeBat" class="bat" src="./image/bat.png" alt="">
+            <img @mousemove="batMousemove" @mousedown="batMousedown" @mouseup="removeBat" style="-webkit-user-drag: none;"class="bat w-[420px] h-[420px] absolute top-[40px] left-[40px]" src="./image/bat.png" alt="">
         </div>
-        <button style="display: none;" @click="playagain" class="playagain">PlayAgain</button>
-        <div @click="sendData" class="out"><==</div>
+        <button style="display: none; left: calc(50% - 80px)" @click="playagain" class="playagain top-[50px] cursor-pointer m-2 select-none absolute inline-block bg-[#d9342e] h-[50px] w-[150px] text-center text-[30px] border-black border-[2px] border-solid rounded-[4px] hover:translate-y-[-5px] hover:bg-black hover:text-[#d9342e] transition-all">PlayAgain</button>
+        <img @click="sendData" src="./image/backHome.png" alt="" class="out m-2 h-[50px] w-auto p-1 cursor-pointer bg-[#9D1D1D] border-black border-[0px] border-solid rounded-[50%] hover:border-[3px] hover:translate-y-[4px] transition-all">
     </div>
 </template>
 
@@ -258,152 +258,3 @@ import { useMyFunction } from './functionsStore';
     }
 </script>
 
-
-<style scoped>
-    .XDbackGround {
-        display: block;
-        background-color: rgb(157, 29, 29);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    .sotien {
-    font-size: 45px;
-    text-align: center;
-    user-select: none;
-    display: block;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(250, 177, 177);
-    border: 5px;
-    margin: 0%; 
-    border-style: solid;
-    border-color: rgb(255, 79, 79);
-    border-radius: 5px;
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    }
-    .inputsFrame {
-        height: 200px;
-        width: 900px;
-        border: 3px;
-        border-style: solid;
-        border-color: black;
-        border-radius: 5px;
-        position: absolute;
-        left: calc(50% - 460px);
-        top: 170px;
-    }
-    .inputFrame {
-        width: 300px;
-        height: 100px;
-        border: 1px;
-        background-color: rgb(198, 72, 72);
-        border-style: solid;
-        border-color: black;
-        position: absolute;
-    }
-    .input {
-        position: absolute;
-        height: 42px;
-        width: 140px;
-        background-color: rgb(215, 215, 215);
-        color: black;
-        font-size: large;
-        border: 1px solid black;
-        border-radius: 2px;
-        cursor: pointer;
-        text-align: center;
-        left: calc(50% - 70px);
-        top: calc(50% - 21px);
-
-    }
-    .xoc {
-        font-size: 45px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: calc(50% - 80px);
-        cursor: pointer;
-        top: 400px;
-    }
-    .batDia {
-        position: absolute;
-        top: calc(50% - 250px);
-        left: calc(50% - 250px);
-    }
-    .dia {
-        display: block;
-        width: 500px;
-        height: 500px;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-    }
-    .bat {
-        display: block;
-        width: 420px;
-        height: 420px;
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        -webkit-user-drag: none;
-    }
-    #xu {
-        display: none;
-        position: absolute
-    }
-    .playagain {
-        display: none;
-        font-size: 20px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: calc(50% - 80px);
-        cursor: pointer;
-        top: 50px;
-    }
-    .out {
-        font-size: 45px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        cursor: pointer;
-    }
-    .out:hover, .xoc:hover, .playagain:hover {
-        border: 6px rgb(255, 26, 26) solid;
-        background-color: rgb(255, 109, 109);
-    }
-</style>

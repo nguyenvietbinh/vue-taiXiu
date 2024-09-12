@@ -1,11 +1,11 @@
 <template>
-    <div style="left: 165px;" class="leftEye">
-        <div class="leftDot"></div>
+    <div class="bg-white leftEye h-[36px] w-[36px] absolute top-[419px] left-[165px]">
+        <div class="leftDot bg-black h-[10px] w-[10px] rounded-[50%] absolute top-[13px] left-[13px]"></div>
     </div>
-    <div style="left: 207px;" class="rightEye">
-        <div class="rightDot"></div>
+    <div class="bg-white rightEye h-[36px] w-[36px] absolute top-[419px] left-[207px]">
+        <div class="rightDot bg-black h-[10px] w-[10px] rounded-[50%] absolute top-[13px] left-[13px]"></div>
     </div>
-    <img @click="handleClick" src="./image/dog.png" alt="" class="dog">
+    <img @click="handleClick" src="./image/dog.png" alt="" class="dog h-[400px] w-auto absolute left-[8px] bottom-0">
 </template>
 
 <script>
@@ -72,35 +72,3 @@ import { onMounted, onUnmounted } from 'vue';
         }
     }
 </script>
-
-<style scoped>
-    .dog {
-        display: block;
-        height: 400px;
-        width: auto;
-        position: absolute;
-        bottom: 0px;
-        -webkit-user-drag: none;
-    }
-    .leftEye, .rightEye {
-        display: block;
-        background-color: aliceblue;
-        height: 36px;
-        width: 36px;
-        border: 0px black solid;
-        border-radius: 50%;
-        position: absolute;
-        top: 419px;
-    }
-    .leftDot, .rightDot {
-        display: block;
-        background-color: black;
-        height: 10px;
-        width: 10px;
-        border: 0px black solid;
-        border-radius: 50%;
-        position: absolute;
-        top: 13px;
-        left: 13px;
-    }
-</style>

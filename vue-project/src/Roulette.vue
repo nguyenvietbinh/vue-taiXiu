@@ -1,7 +1,7 @@
 <template>
-    <div class="RObackGround">
-        <div @click="sendData" class="out"><==</div>
-        <div class="sotien">{{ state.soTien }}</div>
+    <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0">
+        <img @click="sendData" src="./image/backHome.png" alt="" class="out m-2 h-[50px] w-auto p-1 cursor-pointer bg-[#9D1D1D] border-black border-[0px] border-solid rounded-[50%] hover:border-[3px] hover:translate-y-[4px] transition-all">
+        <div class="sotien select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
         <BetTable/>
         <Wheel/>
     </div>
@@ -36,53 +36,3 @@ import Wheel from './rouletteComponents/wheel.vue';
     }
 </script>
 
-
-<style scoped>
-    .RObackGround {
-        display: block;
-        background-color: rgb(157, 29, 29);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    .sotien {
-    font-size: 45px;
-    text-align: center;
-    user-select: none;
-    display: block;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(250, 177, 177);
-    border: 5px;
-    margin: 0%; 
-    border-style: solid;
-    border-color: rgb(255, 79, 79);
-    border-radius: 5px;
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    }
-    .out {
-        font-size: 45px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-    }
-    .out:hover {
-        border: 6px rgb(255, 26, 26) solid;
-        background-color: rgb(255, 109, 109);
-    }
-</style>

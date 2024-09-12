@@ -226,6 +226,7 @@ import { onMounted } from 'vue'
     }
     .oneToEightteenBlock:hover, .nineteenToThirtysixBlock:hover, .oneToTwelveBlock:hover, .TwelveToTwentyfourBlock:hover, .TwentyfourToThirtysixBlock:hover, .even:hover, .red:hover, .black:hover, .odd:hover, .oneNumberBlock:hover, .zero:hover, .zeroZero:hover {
         opacity: 0.5;
+        backdrop-filter: blur(10px);
     }
     .oneToTwelveBlock, .TwelveToTwentyfourBlock, .TwentyfourToThirtysixBlock {
         display: block;

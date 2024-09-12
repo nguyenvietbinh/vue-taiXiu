@@ -1,43 +1,43 @@
 <template>
-    <div class="BCbackGround">
-        <div class="sotien">{{ state.soTien }}</div>
-        <div class="circle">
-          <div class="sucsac1">
-              <div class="cham" id="cham1_ss1"></div>
-              <div class="cham" id="cham2_ss1"></div>
-              <div class="cham" id="cham3_ss1"></div>
-              <div class="cham" id="cham4_ss1"></div>
-              <div class="cham" id="cham5_ss1"></div>
-              <div class="cham" id="cham6_ss1"></div>
-              <div class="cham" id="cham7_ss1"></div>
+    <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0">
+        <div class="sotien select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
+        <div style="left: calc(50% - 160px); top: calc(50% - 200px);" class="circle bg-[#691F1F] border-[#FF4F4F] border-solid border-[10px] rounded-[50%] h-[300px] w-[300px] absolute">
+          <div style="top: calc(30% - 32px); left: calc(50% - 32px);" class="sucsac1 h-[60px] w-[60px] bg-[#3B0D0D] border-[4px] border-solid border-[#3B0D0D] rounded-[10%] absolute">
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham1_ss1"></div>
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[19px]" id="cham2_ss1"></div>
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute bottom-[3px]" id="cham3_ss1"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham4_ss1"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[19px]" id="cham5_ss1"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute bottom-[3px]" id="cham6_ss1"></div>
+              <div style="left: calc(50% - 7px); top: calc(50% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute" id="cham7_ss1"></div>
           </div>
-          <div class="sucsac2">
-              <div class="cham" id="cham1_ss2"></div>
-              <div class="cham" id="cham2_ss2"></div>
-              <div class="cham" id="cham3_ss2"></div>
-              <div class="cham" id="cham4_ss2"></div>
-              <div class="cham" id="cham5_ss2"></div>
-              <div class="cham" id="cham6_ss2"></div>
-              <div class="cham" id="cham7_ss2"></div>
+          <div style="left: calc(30% - 32px); bottom: calc(35% - 32px);" class="sucsac2 h-[60px] w-[60px] bg-[#3B0D0D] border-[4px] border-solid border-[#3B0D0D] rounded-[10%] absolute">
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham1_ss2"></div>
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[19px]" id="cham2_ss2"></div>
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute bottom-[3px]" id="cham3_ss2"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham4_ss2"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[19px]" id="cham5_ss2"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute bottom-[3px]" id="cham6_ss2"></div>
+              <div style="left: calc(50% - 7px); top: calc(50% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute" id="cham7_ss2"></div>
           </div>
-          <div class="sucsac3">
-              <div class="cham" id="cham1_ss3"></div>
-              <div class="cham" id="cham2_ss3"></div>
-              <div class="cham" id="cham3_ss3"></div>
-              <div class="cham" id="cham4_ss3"></div>
-              <div class="cham" id="cham5_ss3"></div>
-              <div class="cham" id="cham6_ss3"></div>
-              <div class="cham" id="cham7_ss3"></div>
+          <div style="right: calc(30% - 32px); bottom: calc(35% - 32px);" class="sucsac3 h-[60px] w-[60px] bg-[#3B0D0D] border-[4px] border-solid border-[#3B0D0D] rounded-[10%] absolute">
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham1_ss3"></div>
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[19px]" id="cham2_ss3"></div>
+              <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute bottom-[3px]" id="cham3_ss3"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham4_ss3"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[19px]" id="cham5_ss3"></div>
+              <div style="right: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute bottom-[3px]" id="cham6_ss3"></div>
+              <div style="left: calc(50% - 7px); top: calc(50% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute" id="cham7_ss3"></div>
           </div>
       </div>
-      <input  maxlength="6" style="left: calc(50% - 500px); top: calc(40% - 160px);" type="text" id="1-input" class="input" placeholder="cược vào 1">
-      <input  maxlength="6" style="left: calc(50% - 500px); top: calc(40% - 60px)" type="text" id="2-input" class="input" placeholder="cược vào 2">
-      <input  maxlength="6" style="left: calc(50% - 500px); top: calc(40% + 40px)" type="text" id="3-input" class="input" placeholder="cược vào 3">
-      <input  maxlength="6" style="right: calc(50% - 500px); top: calc(40% - 160px);" type="text" id="4-input" class="input" placeholder="cược vào 4">
-      <input  maxlength="6" style="right: calc(50% - 500px); top: calc(40% - 60px)" type="text" id="5-input" class="input" placeholder="cược vào 5">
-      <input  maxlength="6" style="right: calc(50% - 500px); top: calc(40% + 40px)" type="text" id="6-input" class="input" placeholder="cược vào 6">
-      <div @click="xoayXucSac" class="xoay">Xoay</div>
-      <div @click="sendData" class="out"><==</div>
+      <input  maxlength="6" style="left: calc(50% - 500px); top: calc(40% - 160px);" type="text" id="1-input" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" placeholder="cược vào 1">
+      <input  maxlength="6" style="left: calc(50% - 500px); top: calc(40% - 60px)" type="text" id="2-input" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" placeholder="cược vào 2">
+      <input  maxlength="6" style="left: calc(50% - 500px); top: calc(40% + 40px)" type="text" id="3-input" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" placeholder="cược vào 3">
+      <input  maxlength="6" style="right: calc(50% - 500px); top: calc(40% - 160px);" type="text" id="4-input" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" placeholder="cược vào 4">
+      <input  maxlength="6" style="right: calc(50% - 500px); top: calc(40% - 60px)" type="text" id="5-input" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" placeholder="cược vào 5">
+      <input  maxlength="6" style="right: calc(50% - 500px); top: calc(40% + 40px)" type="text" id="6-input" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[70px] rounded-md absolute transition-all hover:translate-y-[-3px]" placeholder="cược vào 6">
+      <div @click="xoayXucSac" style="left: calc(50% - 80px); top: calc(50% + 200px);" class="xoay select-none absolute inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-9 border-black border-[2px] border-solid rounded-[4px] hover:translate-y-[-5px] hover:bg-black hover:text-[#d9342e] transition-all">Xoay</div>
+      <img @click="sendData" src="./image/backHome.png" alt="" class="out m-2 h-[50px] w-auto p-1 cursor-pointer bg-[#9D1D1D] border-black border-[0px] border-solid rounded-[50%] hover:border-[3px] hover:translate-y-[4px] transition-all">
     </div>
 </template>
 
@@ -191,187 +191,3 @@ import { useMyFunction } from './functionsStore';
     }
 
 </script>
-
-
-<style scoped>
-.BCbackGround {
-    display: block;
-    background-color: rgb(157, 29, 29);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    }
-.sotien {
-    font-size: 45px;
-    text-align: center;
-    user-select: none;
-    display: block;
-    height: 50px;
-    width: 150px;
-    background-color: rgb(250, 177, 177);
-    border: 5px;
-    margin: 0%; 
-    border-style: solid;
-    border-color: rgb(255, 79, 79);
-    border-radius: 5px;
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    }
-.circle {
-    display: block;
-    background-color: rgb(105, 31, 31);
-    border: 10px;
-    border-style: solid;
-    border-color: rgb(255, 79, 79);
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-    position: absolute; 
-    left: calc(50% - 160px);
-    top: calc(40% - 160px);
-    }
-    .sucsac1 {
-    display: block;
-    height: 60px;
-    width: 60px;
-    background-color: rgb(59, 13, 13);
-    border: 4px;
-    border-style: solid;
-    border-color: rgb(59, 13, 13);
-    border-radius: 10%;
-    position: absolute;
-    left: calc(50% - 32px);
-    top: calc(30% - 32px);
-    }
-    .sucsac2 {
-    display: block;
-    height: 60px;
-    width: 60px;
-    background-color: rgb(59, 13, 13);
-    border: 4px;
-    border-style: solid;
-    border-color: rgb(59, 13, 13);
-    border-radius: 10%;
-    position: absolute;
-    left: calc(30% - 32px);
-    bottom: calc(35% - 32px);
-    }
-    .sucsac3 {
-    display: block;
-    height: 60px;
-    width: 60px;
-    background-color: rgb(59, 13, 13);
-    border: 4px;
-    border-style: solid;
-    border-color: rgb(59, 13, 13);
-    border-radius: 10%;
-    position: absolute;
-    right: calc(30% - 32px);
-    bottom: calc(35% - 32px);
-    }
-    .cham {
-    display: none;
-    height: 14px;
-    width: 14px;
-    border: 0px;
-    border-style: solid;
-    border-radius: 50%;
-    background-color: black;
-    }
-    #cham1_ss1, #cham1_ss2, #cham1_ss3 {
-    position: absolute;
-    left: calc(25% - 7px);
-    top: 3px;
-    }
-    #cham2_ss1, #cham2_ss2, #cham2_ss3 {
-    position: absolute;
-    left: calc(25% - 7px);
-    top: 23px;
-    }
-    #cham3_ss1, #cham3_ss2, #cham3_ss3 {
-    position: absolute;
-    left: calc(25% - 7px);
-    bottom: 3px;
-    }
-    #cham4_ss1, #cham4_ss2, #cham4_ss3 {
-    position: absolute;
-    right: calc(25% - 7px);
-    top: 3px;
-    }
-    #cham5_ss1, #cham5_ss2, #cham5_ss3 {
-    position: absolute;
-    right: calc(25% - 7px);
-    top: 23px;
-    }
-    #cham6_ss1, #cham6_ss2, #cham6_ss3 {
-    position: absolute;
-    right: calc(25% - 7px);
-    bottom: 3px;
-    }
-    #cham7_ss1, #cham7_ss2, #cham7_ss3 {
-    position: absolute;
-    left: calc(50% - 7px);
-    top: calc(50% - 7px);
-    }
-    .out {
-        font-size: 45px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-    }
-    .out:hover {
-        border: 6px rgb(255, 26, 26) solid;
-        background-color: rgb(255, 109, 109);
-    }
-    .input {
-        user-select: none;
-        font-size: 40px;
-        background-color: #ffb2ba; /* Màu nền cho cửa sổ input */
-        border: 2px solid #d9342e; /* Màu đỏ cho viền */
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        height: 50px;
-        width: 250px;
-        position: absolute;
-    }
-    .input:hover {
-        border: 3px solid black;
-    }
-    .xoay {
-        font-size: 45px;
-        text-align: center;
-        user-select: none;
-        display: block;
-        height: 50px;
-        width: 150px;
-        background-color: rgb(250, 177, 177);
-        border: 5px;
-        margin: 0%; 
-        border-style: solid;
-        border-color: rgb(255, 79, 79);
-        border-radius: 5px;
-        position: absolute;
-        top: calc(50% + 200px);
-        left: calc(50% - 80px);
-    }
-    .xoay:hover {
-        border: 6px rgb(255, 26, 26) solid;
-        background-color: rgb(255, 109, 109);
-    }
-</style>

@@ -1,12 +1,18 @@
 
 <template>
-    <div v-if="homePageIsOn" class="backGround">
-        <div id="logo" class="logoTaiXiu" style="left: 10%;" @click="taiXiuIsOn = true; logoClick()">TX</div>
-        <div id="logo" class="logoBauCua" style="left: 20%;" @click="bauCuaIsOn = true; logoClick()">BC</div>
-        <div id="logo" class="logoBlackJack" style="left: 30%;" @click="BlackJackIsOn = true; logoClick()">BJ</div>
-        <div id="logo" class="logoXocDia" style="left: 40%;" @click="xocDiaIsOn = true; logoClick()">XD</div>
-        <div id="logo" class="logoBaccarat" style="left: 50%;" @click="BaccaratIsOn = true; logoClick()">BA</div>
-        <div id="logo" class="logoRoulette" style="left: 60%;" @click="RouletteIsOn = true; logoClick()">RO</div>
+    <div v-if="homePageIsOn" class="backGround font-serif bg-[#f9f9f9] w-full h-full absolute">
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove"  class="logoBauCua hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[20%] transition-all duration-[0.4s]" @click="bauCuaIsOn = true; logoClick()">BC</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoTaiXiu rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[10%] transition-all duration-[0.4s]" @click="taiXiuIsOn = true; logoClick()">TX</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBlackJack rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[30%] transition-all duration-[0.4s]" @click="BlackJackIsOn = true; logoClick()">BJ</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoXocDia rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[40%] transition-all duration-[0.4s]" @click="xocDiaIsOn = true; logoClick()">XD</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBaccarat rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[50%] transition-all duration-[0.4s]" @click="BaccaratIsOn = true; logoClick()">BA</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoRoulette rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[60%] transition-all duration-[0.4s]" @click="RouletteIsOn = true; logoClick()">RO</div>
+        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Bầu Cua</div>
+        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Tài Xỉu</div>
+        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Blackjack</div>
+        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Xóc Đĩa</div>
+        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Baccarat</div>
+        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Roulette</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
@@ -37,6 +43,7 @@
                 RouletteIsOn: false,
                 DogAnimationIsON: true,
                 logo: null,
+                logoName: null,
                 homePageIsOn: true,
             }
         },
@@ -74,6 +81,26 @@
             logoClick() {
                 this.DogAnimationIsON = false
                 this.homePageIsOn = false
+                this.logoName.forEach(element => {
+                    element.style.display = 'none'
+                });
+            },
+            handleMouseMove() {
+                this.logo = document.querySelectorAll('#logo')
+                this.logo.forEach((item, index) => {
+                    if (item === event.target) {
+                        this.logoName[index].style.display = 'inline-block'
+                        this.logoName[index].style.left = `${event.clientX + 20}px`
+                        this.logoName[index].style.top = `${event.clientY + 20}px`
+                    }
+                });
+            },
+            handleMouseOut() {
+                this.logo.forEach((item, index) => {
+                    if (item === event.target) {
+                        this.logoName[index].style.display = 'none'
+                    }
+                })
             }
         },
         components: {
@@ -87,38 +114,13 @@
         }, 
         mounted() {
             this.logo = document.querySelectorAll('#logo')
+            this.logoName = document.querySelectorAll('.logoName')
         }
     }
 </script>
 
-<style scoped>
-    .backGround {
-        display: block;
-        background-color: #f9f9f9;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    .logoTaiXiu,.logoBauCua, .logoBlackJack, .logoXocDia, .logoBaccarat, .logoRoulette {
-        cursor: pointer;
-        user-select: none;
-        display: block;
-        height: 100px;
-        width: 100px;
-        background-color: #f9f9f9;
-        border: 0px, black, solid;
-        border-radius: 5px;
-        position: absolute;
-        top: 50px;
-        font-size: 70px;
-        text-align: center;
-    }
-    .logoTaiXiu:hover,.logoBauCua:hover, .logoBlackJack:hover, .logoXocDia:hover, .logoBaccarat:hover, .logoRoulette:hover {
-        border: 0px, black, solid;
-        border-radius: 5px;
-        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
-        -10px -10px 10px white
+<style>
+    #logo:hover {
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px rgb(255, 255, 255);
     }
 </style>
