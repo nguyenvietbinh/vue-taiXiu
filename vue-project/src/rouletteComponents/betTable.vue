@@ -1,62 +1,62 @@
 <template>
-    <div @mousemove="handleMouseMove" class="betTable">
-        <img @click="handleClick" class="rouletteBetTableImage" src="./rouletteImage/rouletteBetTable.png" alt="">
-        <div style="top: 221px;" class="zero betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div class="oneNumberBlock betBlock"></div>
-        <div style="top: 51px; left: 68px;" class="oneToEightteenBlock betBlock"></div>
-        <div style="top: 51px; left: 385px;" class="nineteenToThirtysixBlock betBlock"></div>
-        <div style="left: 68px;" class="oneToTwelveBlock betBlock"></div>
-        <div style="left: 279px;" class="TwelveToTwentyfourBlock betBlock"></div>
-        <div style="left: 490px;" class="TwentyfourToThirtysixBlock betBlock"></div>
-        <div style="left: 68px;" class="even betBlock"></div>
-        <div style="left: 227px;" class="red betBlock"></div>
-        <div style="left: 386px;" class="black betBlock"></div>
-        <div style="left: 544px;" class="odd betBlock"></div>
-        <div style="top: 119px;" class="zeroZero betBlock"></div>
+    <div @mousemove="handleMouseMove" class="betTable h-[500px] w-[792px] fixed top-[65px] left-[600px]">
+        <img @click="handleClick" class="rouletteBetTableImage h-full w-full absolute top-0 left-0" src="./rouletteImage/rouletteBetTable.png" alt="">
+        <div style="top: 221px;" class="zero betBlock hover:opacity-[0.5] bg-white h-[99px] w-[40px] absolute left-[25px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div style="top: 51px; left: 68px;" class="oneToEightteenBlock betBlock absolute bg-white h-[64px] w-[314px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="top: 51px; left: 385px;" class="nineteenToThirtysixBlock betBlock absolute bg-white h-[64px] w-[314px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 68px;" class="oneToTwelveBlock betBlock bg-white h-[65px] w-[208px] absolute top-[323px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 279px;" class="TwelveToTwentyfourBlock betBlock bg-white h-[65px] w-[208px] absolute top-[323px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 490px;" class="TwentyfourToThirtysixBlock betBlock bg-white h-[65px] w-[208px] absolute top-[323px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 68px;" class="even betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 227px;" class="red betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 386px;" class="black betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="left: 544px;" class="odd betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="top: 119px;" class="zeroZero betBlock hover:opacity-[0.5] bg-white h-[99px] w-[40px] absolute left-[25px] opacity-0 transition-opacity duration-[0.2s]"></div>
     </div>
-    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiveChip">5</div>
-    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="tenChip">10</div>
-    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="twentyChip">20</div>
-    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiftyChip">50</div>
-    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="hundredChip">100</div>
+    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiveChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[aliceblue] left-[800px]">5</div>
+    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="tenChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[yellow] left-[850px]">10</div>
+    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="twentyChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[#00A6FF] left-[900px]">20</div>
+    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiftyChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[#FF00AA] left-[950px]">50</div>
+    <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="hundredChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[#00C54B] left-[1000px]">100</div>
 </template>
 
 <script>
@@ -197,144 +197,3 @@ import { onMounted } from 'vue'
         },
     }
 </script>
-
-<style scoped>
-    .betTable {
-        height: 500px;
-        width: 792px;
-        position: fixed;
-        left: 600px;
-        top: 65px;
-    }
-    .rouletteBetTableImage {
-        -webkit-user-drag: none;
-        position: absolute;
-        height: 500px;
-        width: 792px;
-        top: 0px;
-        left: 0px;
-        user-select: none;
-    }
-    .oneToEightteenBlock, .nineteenToThirtysixBlock {
-        display: block;
-        position: absolute;
-        background-color: white;
-        height: 64px;
-        width: 314px;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-    .oneToEightteenBlock:hover, .nineteenToThirtysixBlock:hover, .oneToTwelveBlock:hover, .TwelveToTwentyfourBlock:hover, .TwentyfourToThirtysixBlock:hover, .even:hover, .red:hover, .black:hover, .odd:hover, .oneNumberBlock:hover, .zero:hover, .zeroZero:hover {
-        opacity: 0.5;
-        backdrop-filter: blur(10px);
-    }
-    .oneToTwelveBlock, .TwelveToTwentyfourBlock, .TwentyfourToThirtysixBlock {
-        display: block;
-        background-color: white;
-        height: 65px;
-        width: 208px;
-        position: absolute;
-        top: 323px;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-    .even, .red, .black, .odd {
-        display: block;
-        background-color: white;
-        height: 64px;
-        width: 155px;
-        position: absolute;
-        top: 392px;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-    .zero, .zeroZero {
-        display: block;
-        background-color: white;
-        height: 99px;
-        width: 40px;
-        position: absolute;
-        left: 25px;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-    .oneNumberBlock {
-        display: block;
-        width: 50px;
-        height: 65px;
-        background-color: white;
-        position: absolute;
-        opacity: 0;
-        transition: opacity 0.2s;
-    }
-    .chipBar {
-        position: absolute;
-        bottom: 10px;
-    }
-    .fiveChip {
-        display: block;
-        background-color: aliceblue;
-        height: 20px;
-        width: 20px;
-        border: 1px black solid;
-        border-radius: 50%;
-        position: absolute;
-        left: 800px;
-        top: 535px;
-        text-align: center;
-        user-select: none;
-    }
-    .tenChip {
-        display: block;
-        background-color: yellow;
-        height: 20px;
-        width: 20px;
-        border: 1px black solid;
-        border-radius: 50%;
-        position: absolute;
-        left: 850px;
-        top: 535px;
-        text-align: center;
-        user-select: none;
-    }
-    .twentyChip {
-        display: block;
-        background-color: rgb(0, 166, 255);
-        height: 20px;
-        width: 20px;
-        border: 1px black solid;
-        border-radius: 50%;
-        position: absolute;
-        left: 900px;
-        top: 535px;
-        text-align: center;
-        user-select: none;
-    }
-    .fiftyChip {
-        display: block;
-        background-color: rgb(255, 0, 170);
-        height: 20px;
-        width: 20px;
-        border: 1px black solid;
-        border-radius: 50%;
-        position: absolute;
-        left: 950px;
-        top: 535px;
-        text-align: center;
-        user-select: none;
-    }
-    .hundredChip {
-        font-size: 14px;
-        display: block;
-        background-color: rgb(0, 197, 75);
-        height: 20px;
-        width: 20px;
-        border: 1px black solid;
-        border-radius: 50%;
-        position: absolute;
-        left: 1000px;
-        top: 535px;
-        text-align: center;
-        user-select: none;
-    }
-</style>

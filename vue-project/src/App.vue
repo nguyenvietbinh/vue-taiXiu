@@ -1,12 +1,12 @@
 
 <template>
     <div v-if="homePageIsOn" class="backGround font-serif bg-[#f9f9f9] w-full h-full absolute">
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove"  class="logoBauCua hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[20%] transition-all duration-[0.4s]" @click="bauCuaIsOn = true; logoClick()">BC</div>
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoTaiXiu rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[10%] transition-all duration-[0.4s]" @click="taiXiuIsOn = true; logoClick()">TX</div>
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBlackJack rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[30%] transition-all duration-[0.4s]" @click="BlackJackIsOn = true; logoClick()">BJ</div>
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoXocDia rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[40%] transition-all duration-[0.4s]" @click="xocDiaIsOn = true; logoClick()">XD</div>
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBaccarat rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[50%] transition-all duration-[0.4s]" @click="BaccaratIsOn = true; logoClick()">BA</div>
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoRoulette rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[60%] transition-all duration-[0.4s]" @click="RouletteIsOn = true; logoClick()">RO</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo"  class="logoBauCua hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[20%] transition-all duration-[0.4s]" @click="bauCuaIsOn = true; logoClick()">BC</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoTaiXiu hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[10%] transition-all duration-[0.4s]" @click="taiXiuIsOn = true; logoClick()">TX</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBlackJack hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[30%] transition-all duration-[0.4s]" @click="BlackJackIsOn = true; logoClick()">BJ</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoXocDia hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[40%] transition-all duration-[0.4s]" @click="xocDiaIsOn = true; logoClick()">XD</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBaccarat hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[50%] transition-all duration-[0.4s]" @click="BaccaratIsOn = true; logoClick()">BA</div>
+        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoRoulette hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[60%] transition-all duration-[0.4s]" @click="RouletteIsOn = true; logoClick()">RO</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Bầu Cua</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Tài Xỉu</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Blackjack</div>
@@ -118,9 +118,3 @@
         }
     }
 </script>
-
-<style>
-    #logo:hover {
-        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px rgb(255, 255, 255);
-    }
-</style>

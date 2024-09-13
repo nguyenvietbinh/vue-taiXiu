@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0">
-        <div class="sotien select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
+        <div class="sotien m-2 select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
         <div style="left: calc(50% - 460px);" class="inputsFrame h-[200px] w-[900px] border-[3px] border-solid border-black rounded-[5px] absolute top-[170px]">
             <div style="left: 0%; top: 0%" class="inputFrame w-[300px] h-[100px] border-[1px] bg-[#C64848] border-solid border-black absolute" id="chan">
                 <input id="chanInput" type="text" style="left: calc(50% - 70px); top: calc(50% - 21px);" class="input select-none bg-[#ffb2ba] border-[2px] border-solid border-[#d9342e] p-[20px] text-center text-[20px] h-[42px] w-[140px] rounded-md absolute transition-all hover:translate-y-[-3px]" maxlength="6" placeholder="Chẵn">

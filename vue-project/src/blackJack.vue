@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0 font-mono">
-        <div class="sotien select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
+        <div class="sotien m-2 select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
         <div style="top: 10%;left: calc(50% - 602px);" class="botBar h-[200px] w-[1200px] bg-[#9D1D1D] border-[2px] border-white border-solid rounded-[5px] absolute">
             <div style="left: 38px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame1"></div>
             <div style="left: 238px;" class="frame select-none bg-[#5B1717] h-[160px] w-[120px] border-[2px] border-white border-solid rounded-[5px] text-center text-[100px] absolute top-[18px]" id="botBar-frame2"></div>
