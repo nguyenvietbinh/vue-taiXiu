@@ -6,20 +6,17 @@
         <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBlackJack hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[30%] transition-all duration-[0.4s]" @click="BlackJackIsOn = true; logoClick()">BJ</div>
         <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoXocDia hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[40%] transition-all duration-[0.4s]" @click="xocDiaIsOn = true; logoClick()">XD</div>
         <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoBaccarat hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[50%] transition-all duration-[0.4s]" @click="BaccaratIsOn = true; logoClick()">BA</div>
-        <div @mouseout="handleMouseOut" @mousemove="handleMouseMove" id="logo" class="logoRoulette hover:shadow-bs rounded-[10px] hover:translate-y-[10px] cursor-pointer select-none h-[100px] w-[100px] absolute top-[50px] text-center text-[70px] left-[60%] transition-all duration-[0.4s]" @click="RouletteIsOn = true; logoClick()">RO</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Bầu Cua</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Tài Xỉu</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Blackjack</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Xóc Đĩa</div>
         <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Baccarat</div>
-        <div class="logoName transition-transform p-1 text-[#f9f9f9] bg-black m-1 rounded-[5px] font-sans opacity-[0.7] absolute hidden">Roulette</div>
     </div>
     <Taixiu v-if="taiXiuIsOn" @send-data-fromTaiXiu="receiveDataFromTaiXiu"/>
     <BauCua v-if="bauCuaIsOn" @send-data-fromBauCua="receiveDataFromBauCua"/>
     <BlackJack v-if="BlackJackIsOn" @send-data-fromBlackJack="receiveDataFromBlackJack"/>  
     <xocDia v-if="xocDiaIsOn" @send-data-fromXocDia="receiveDataFromXocDia"/>
     <Baccarat v-if="BaccaratIsOn" @send-data-fromBaccarat="receiveDataFromBaccarat"/>
-    <Roulette v-if="RouletteIsOn" @send-data-fromRoulette="receiveDataFromRoulette"/>
     <DogAnimation v-if="DogAnimationIsON"/>
 </template>
 
@@ -30,7 +27,6 @@
     import BlackJack from './blackJack.vue';
     import xocDia from './xocDia.vue';
     import Baccarat from './Baccarat.vue';
-    import Roulette from './Roulette.vue';
     import DogAnimation from './dogAnimation.vue'
     export default {
         data() {
@@ -40,7 +36,6 @@
                 BlackJackIsOn: false,
                 xocDiaIsOn: false,
                 BaccaratIsOn: false,
-                RouletteIsOn: false,
                 DogAnimationIsON: true,
                 logo: null,
                 logoName: null,
@@ -70,11 +65,6 @@
             },
             receiveDataFromBaccarat(data) {
                 this.BaccaratIsOn = data
-                this.DogAnimationIsON = true
-                this.homePageIsOn = true
-            },
-            receiveDataFromRoulette(data) {
-                this.RouletteIsOn = data
                 this.DogAnimationIsON = true
                 this.homePageIsOn = true
             },
@@ -109,7 +99,6 @@
             BlackJack,
             xocDia,
             Baccarat,
-            Roulette,
             DogAnimation,
         }, 
         mounted() {

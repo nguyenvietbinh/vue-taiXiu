@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[#9D1D1D] w-full h-full absolute left-0 top-0">
-        <div class="sotien m-2 select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }}</div>
+        <div class="sotien m-2 select-none absolute top-0 right-0 inline-block bg-[#d9342e] h-[50px] w-auto text-[30px] px-2 border-black border-[2px] border-solid rounded-[4px] font-mono">{{ state.soTien }},0$</div>
         <div style="left: calc(50% - 160px); top: calc(50% - 200px);" class="circle bg-[#691F1F] border-[#FF4F4F] border-solid border-[10px] rounded-[50%] h-[300px] w-[300px] absolute">
           <div style="top: calc(30% - 32px); left: calc(50% - 32px);" class="sucsac1 h-[60px] w-[60px] bg-[#3B0D0D] border-[4px] border-solid border-[#3B0D0D] rounded-[10%] absolute">
               <div style="left: calc(25% - 7px);" class="cham h-[14px] w-[14px] bg-black rounded-[50%] hidden absolute top-[3px]" id="cham1_ss1"></div>

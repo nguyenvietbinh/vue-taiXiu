@@ -1,46 +1,46 @@
 <template>
     <div @mousemove="handleMouseMove" class="betTable h-[500px] w-[792px] fixed top-[65px] left-[600px]">
         <img @click="handleClick" class="rouletteBetTableImage h-full w-full absolute top-0 left-0" src="./rouletteImage/rouletteBetTable.png" alt="">
-        <div style="top: 221px;" class="zero betBlock hover:opacity-[0.5] bg-white h-[99px] w-[40px] absolute left-[25px] opacity-0 transition-opacity duration-[0.2s]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
-        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s] hover:opacity-[0.5]"></div>
+        <div style="top: 221px;" class="zero betBlock bg-white h-[99px] w-[40px] absolute left-[25px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div class="oneNumberBlock betBlock w-[50px] h-[65px] bg-white absolute opacity-0 transition-opacity duration-[0.2s]"></div>
         <div style="top: 51px; left: 68px;" class="oneToEightteenBlock betBlock absolute bg-white h-[64px] w-[314px] opacity-0 transition-opacity duration-[0.2s]"></div>
         <div style="top: 51px; left: 385px;" class="nineteenToThirtysixBlock betBlock absolute bg-white h-[64px] w-[314px] opacity-0 transition-opacity duration-[0.2s]"></div>
         <div style="left: 68px;" class="oneToTwelveBlock betBlock bg-white h-[65px] w-[208px] absolute top-[323px] opacity-0 transition-opacity duration-[0.2s]"></div>
@@ -50,7 +50,7 @@
         <div style="left: 227px;" class="red betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
         <div style="left: 386px;" class="black betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
         <div style="left: 544px;" class="odd betBlock bg-white h-[64px] w-[155px] absolute top-[392px] opacity-0 transition-opacity duration-[0.2s]"></div>
-        <div style="top: 119px;" class="zeroZero betBlock hover:opacity-[0.5] bg-white h-[99px] w-[40px] absolute left-[25px] opacity-0 transition-opacity duration-[0.2s]"></div>
+        <div style="top: 119px;" class="zeroZero betBlock bg-white h-[99px] w-[40px] absolute left-[25px] opacity-0 transition-opacity duration-[0.2s]"></div>
     </div>
     <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiveChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[aliceblue] left-[800px]">5</div>
     <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="tenChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[yellow] left-[850px]">10</div>
@@ -58,9 +58,9 @@
     <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="fiftyChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[#FF00AA] left-[950px]">50</div>
     <div @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" class="hundredChip text-[13px] h-[20px] w-[20px] rounded-[50%] boder-[1px] border-black border-solid absolute top-[535px] text-center select-none bg-[#00C54B] left-[1000px]">100</div>
 </template>
-
 <script>
 import { onMounted } from 'vue'
+import { state } from '@/dataStore';
     export default {
         setup() {
             const height = 65
@@ -105,7 +105,8 @@ import { onMounted } from 'vue'
                 mouseY: 0,
                 newMouseX: 0,
                 newMouseY: 0,
-                betBlocks: null
+                betBlocks: null,
+                lstOfMoney: [5, 10, 20, 50, 100]
             }
         },
         mounted() {
@@ -138,10 +139,17 @@ import { onMounted } from 'vue'
             handleMouseUp() {
                 for (let i in this.chipIsOnList) {
                     if (this.chipIsOnList[i]) {
-                        this.chipIsOnList[i] = false
-                        if (!this.isInBetBlock(this.mouseX, this.mouseY)) {
+                        this.betBlocks.forEach((item, index) => {
+                            if (this.positionIsInSquare(this.mouseX, this.mouseY, parseInt(window.getComputedStyle(item).left) + 600, parseInt(window.getComputedStyle(item).top) + 65, parseInt(window.getComputedStyle(item).height), parseInt(window.getComputedStyle(item).width))) {
+                                item.style.opacity = '0.5'
+                                this.chipIsOnList[i] = false
+                                state.soTien -= this.lstOfMoney[i]
+                            }
+                        })
+                        if (this.chipIsOnList[i]) {
                             this.chipList[i].style.left = `${800 + (parseInt(i)*50)}px`
                             this.chipList[i].style.top = '535px'
+                            this.chipIsOnList[i] = false
                         }
                     }
                 }
@@ -153,25 +161,20 @@ import { onMounted } from 'vue'
                     if (this.chipIsOnList[i]) {
                         this.chipList[i].style.left = `${this.mouseX - 10}px`
                         this.chipList[i].style.top = `${this.mouseY - 10}px`
-                        if ((this.mouseX <= 600) || (this.mouseX >= 1392)) {
-                            this.chipIsOnList[i] = false
+                        this.betBlocks.forEach((item, index) => {
+                            if (this.positionIsInSquare(this.mouseX, this.mouseY, parseInt(window.getComputedStyle(item).left) + 600, parseInt(window.getComputedStyle(item).top) + 65, parseInt(window.getComputedStyle(item).height), parseInt(window.getComputedStyle(item).width))) {
+                                item.style.opacity = '0.5'
+                            } else {
+                                item.style.opacity = '0'
+                            }
+                        })
+                        if (!this.positionIsInSquare(this.mouseX, this.mouseY, 600, 65, 500, 792)) {
                             this.chipList[i].style.left = `${800 + (parseInt(i)*50)}px`
                             this.chipList[i].style.top = '535px'
-                        } else if ((this.mouseY <= 65) || (this.mouseY >= 565)) {
                             this.chipIsOnList[i] = false
-                            this.chipList[i].style.left = `${800 + (parseInt(i)*50)}px`
-                            this.chipList[i].style.top = '535px'
                         }
                     }
                 }
-                this.betBlocks.forEach((item, index) => {
-                    if (this.positionIsInSquare(this.mouseX, this.mouseY, parseInt(window.getComputedStyle(item).left) + 600, parseInt(window.getComputedStyle(item).top) + 65, parseInt(window.getComputedStyle(item).height), parseInt(window.getComputedStyle(item).width))) {
-                        item.style.opacity = '0.5'
-                    } else {
-                        item.style.opacity = '0'
-                    }
-                })
-                
             },
             positionIsInSquare(Px, Py, SQx, SQy, h, w) {
                 if ((Px >= SQx) && (Px <= (SQx + w))) {
